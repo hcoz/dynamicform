@@ -1,0 +1,31 @@
+{
+    "formSpecs": {
+        "formName": "samplename",
+        "method": "POST",
+        "action": "http://halilcanozcelik.com"
+    },
+    "formRows": [
+        {
+            "label": {
+                "text": "input row 1",
+                "class": "class-label"
+            },
+            "input": {
+                "type": "number",
+                "value": "3",
+                "class": "class-input"
+            }
+        },
+        {
+            "label": {
+                "text": "input row 2",
+                "class": "class-label"
+            },
+            "input": {
+                "type": "text",
+                "value": "value text",
+                "class": "class-input"
+            }
+        }
+    ]
+}
