@@ -5,27 +5,68 @@
         "action": "http://halilcanozcelik.com"
     },
     "formRows": [
-        {
+        [{
+            "fieldSpecs": {
+                "class": "field-class"
+            },
             "label": {
+                "for": "input1",
                 "text": "input row 1",
                 "class": "class-label"
             },
             "input": {
                 "type": "number",
+                "id": "input1",
                 "value": "3",
                 "class": "class-input"
             }
         },
         {
+            "fieldSpecs": {
+                "class": "field-class"
+            },
             "label": {
+                "for": "input2",
                 "text": "input row 2",
                 "class": "class-label"
             },
             "input": {
                 "type": "text",
+                "id": "input2",
                 "value": "value text",
                 "class": "class-input"
             }
-        }
+        }],
+        [{
+            "fieldSpecs": {
+                "class": ""
+            },
+            "label": {
+                "for": "input3",
+                "text": "input row 1",
+                "class": "class-label"
+            },
+            "input": {
+                "type": "checkbox",
+                "id": "input3",
+                "class": "class-input"
+            }
+        },
+        {
+            "fieldSpecs": {
+                "class": ""
+            },
+            "label": {
+                "for": "input4",
+                "text": "input row 2",
+                "class": "class-label"
+            },
+            "input": {
+                "type": "text",
+                "id": "input4",
+                "value": "value text",
+                "class": "class-input"
+            }
+        }]
     ]
 }
