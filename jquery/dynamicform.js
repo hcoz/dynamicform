@@ -21,12 +21,14 @@
                 $label = $('<label></label>');
                 if ('class' in formRow.label) $label.prop('class', formRow.label.class);
                 $label.prop('for', formRow.label.for);
+                $label.text(formRow.label.text || '');
 
                 $input = $('<input/>');
                 $input.prop('id', formRow.input.id);
                 $input.prop('name', formRow.input.name);
                 if ('class' in formRow.input) $input.prop('class', formRow.input.class);
                 if ('value' in formRow.input) $input.prop('value', formRow.input.value);
+                if ('placeholder' in formRow.input) $input.prop('placeholder', formRow.input.placeholder);
                 $input.prop('type', formRow.input.type);
                 $input.prop('disabled', formRow.input.disabled || false);
                 $input.prop('required', formRow.input.required || false);
@@ -39,6 +41,7 @@
                     case 'button':
                         break;
                     case 'checkbox':
+                        $form.prop('checked', formRow.input.checked || false);
                         break;
                     case 'color':
                         break;
@@ -70,7 +73,23 @@
                     case 'month':
                         break;
                     case 'number':
-
+                        break;
+                    case 'password':
+                        $input.prop('autocoplete', formRow.input.autocomplete || false);
+                        $input.prop('inputmode', formRow.input.inputmode || false);
+                        if ('size' in formRow.input) $input.prop('size', formRow.input.size);
+                        if ('minLength' in formRow.input) $input.prop('minLength', formRow.input.minLength);
+                        if ('maxLength' in formRow.input) $input.prop('maxLength', formRow.input.maxLength);
+                        if ('pattern' in formRow.input) $input.prop('pattern', formRow.input.pattern);
+                        break;
+                    case 'radio':
+                        $form.prop('checked', formRow.input.checked || false);
+                        break;
+                    case 'range':
+                        if ('min' in formRow.input) $input.prop('min', formRow.input.min);
+                        if ('max' in formRow.input) $input.prop('max', formRow.input.max);
+                        if ('step' in formRow.input) $input.prop('step', formRow.input.step);
+                        break;
                     default:
                 }
                 

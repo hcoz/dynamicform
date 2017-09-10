@@ -15,9 +15,10 @@
                 "class": "class-label"
             },
             "input": {
-                "type": "number",
+                "type": "radio",
                 "id": "input1",
-                "value": "3",
+                "name": "radiobtn",
+                "checked": true,
                 "class": "class-input"
             }
         },
@@ -31,8 +32,9 @@
                 "class": "class-label"
             },
             "input": {
-                "type": "text",
+                "type": "radio",
                 "id": "input2",
+                "name": "radiobtn",
                 "value": "value text",
                 "class": "class-input"
             }
