@@ -133,7 +133,7 @@
         var formElements = $('dynamicform');
 
         for (var formElement of formElements) {
-            $.getJSON(formElement.dataset.json, generateForm.bind({formId: formElement.dataset.id}));
+            $.getJSON(formElement.dataset.json, generateForm.bind({formId: formElement.id}));
         }
     });
 }(jQuery));
