@@ -90,6 +90,24 @@
                         if ('max' in formRow.input) $input.prop('max', formRow.input.max);
                         if ('step' in formRow.input) $input.prop('step', formRow.input.step);
                         break;
+                    case 'reset':
+                        break;
+                    case 'search':
+                        $input.prop('autocoplete', formRow.input.autocomplete || false);
+                        if ('placeholder' in formRow.input) $input.prop('placeholder', formRow.input.placeholder);
+                        if ('size' in formRow.input) $input.prop('size', formRow.input.size);
+                        if ('minLength' in formRow.input) $input.prop('minLength', formRow.input.minLength);
+                        if ('maxLength' in formRow.input) $input.prop('maxLength', formRow.input.maxLength);
+                        if ('pattern' in formRow.input) $input.prop('pattern', formRow.input.pattern);
+                        break;
+                    case 'submit':
+                        break;
+                    case 'text':
+                        if ('placeholder' in formRow.input) $input.prop('placeholder', formRow.input.placeholder);
+                        break;
+                    case 'time':
+                        if ('step' in formRow.input) $input.prop('step', formRow.input.step);
+                        break;
                     default:
                 }
                 
