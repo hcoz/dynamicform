@@ -23,13 +23,17 @@
                 $label.prop('for', formRow.label.for);
                 $label.text(formRow.label.text || '');
 
-                $input = $('<input/>');
+                if (formRow.input.type == 'textarea') {
+                    $input = $('<textarea></textarea>');
+                } else {
+                    $input = $('<input/>');
+                    $input.prop('type', formRow.input.type);
+                }
                 $input.prop('id', formRow.input.id);
                 $input.prop('name', formRow.input.name);
                 if ('class' in formRow.input) $input.prop('class', formRow.input.class);
                 if ('value' in formRow.input) $input.prop('value', formRow.input.value);
                 if ('placeholder' in formRow.input) $input.prop('placeholder', formRow.input.placeholder);
-                $input.prop('type', formRow.input.type);
                 $input.prop('disabled', formRow.input.disabled || false);
                 $input.prop('required', formRow.input.required || false);
                 $input.prop('readonly', formRow.input.readonly || false);
@@ -105,6 +109,9 @@
                     case 'text':
                         if ('placeholder' in formRow.input) $input.prop('placeholder', formRow.input.placeholder);
                         break;
+                    case 'textarea':
+                        $input.prop('rows', formRow.input.rows || '');
+                        $input.prop('cols', formRow.input.cols || '');
                     case 'time':
                         if ('step' in formRow.input) $input.prop('step', formRow.input.step);
                         break;

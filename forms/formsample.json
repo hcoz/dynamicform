@@ -27,6 +27,23 @@
                 "class": "field-class"
             },
             "label": {
+                "for": "input1",
+                "text": "input row 1",
+                "class": "class-label"
+            },
+            "input": {
+                "type": "textarea",
+                "id": "input1",
+                "name": "radiobtn",
+                "class": "class-input",
+                "rows": "23"
+            }
+        },
+        {
+            "fieldSpecs": {
+                "class": "field-class"
+            },
+            "label": {
                 "for": "input2",
                 "text": "input row 2",
                 "class": "class-label"
