@@ -1,4 +1,8 @@
 (function ($) {
+    /**
+     * 
+     * @param {*JSON object which includes form data} formData
+     */
     function generateForm(formData) {
         var $form,
             $fieldset,
@@ -129,6 +133,7 @@
         $(document.getElementById(this.formId)).replaceWith($form);
     }
 
+    // document ready actions
     $(function () {
         var formElements = $('dynamicform');
 
