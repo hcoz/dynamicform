@@ -1,6 +1,6 @@
 (function ($) {
     /**
-     * 
+     * Generate form according to structure JSON
      * @param {*JSON object which includes form data} formData
      */
     function generateForm(formData) {
@@ -9,6 +9,8 @@
             $field,
             $label,
             $input;
+
+        if (!formData) throw 'No JSON data';
         
         $form = $('<form></form>');
         $form.prop('name', formData.formSpecs.formName);
