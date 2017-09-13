@@ -32,11 +32,11 @@
                 "class": "class-label"
             },
             "input": {
-                "type": "textarea",
+                "type": "radio",
                 "id": "input1",
                 "name": "radiobtn",
                 "class": "class-input",
-                "rows": "23"
+                "value": "23"
             }
         },
         {
@@ -49,10 +49,10 @@
                 "class": "class-label"
             },
             "input": {
-                "type": "radio",
+                "type": "textarea",
                 "id": "input2",
                 "name": "radiobtn",
-                "value": "value text",
+                "rows": "23",
                 "class": "class-input"
             }
         }],
@@ -67,7 +67,7 @@
             },
             "input": {
                 "type": "checkbox",
-                "id": "input3",
+                "name": "input3",
                 "class": "class-input"
             }
         },
@@ -81,8 +81,8 @@
                 "class": "class-label"
             },
             "input": {
-                "type": "text",
-                "id": "input4",
+                "type": "password",
+                "name": "input4",
                 "value": "value text",
                 "class": "class-input"
             }

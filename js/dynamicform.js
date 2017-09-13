@@ -64,14 +64,15 @@
                     $input = document.createElement('input');
                     $input.setAttribute('type', formRow.input.type);
                 }
-                $input.setAttribute('id', formRow.input.id);
+                if (formRow.input.id) $input.setAttribute('id', formRow.input.id);
+                if (!formRow.input.name) throw 'input name is necessary';
                 $input.setAttribute('name', formRow.input.name);
                 if ('class' in formRow.input) $input.setAttribute('class', formRow.input.class);
                 if ('value' in formRow.input) $input.setAttribute('value', formRow.input.value);
                 if ('placeholder' in formRow.input) $input.setAttribute('placeholder', formRow.input.placeholder);
-                $input.setAttribute('disabled', formRow.input.disabled || false);
-                $input.setAttribute('required', formRow.input.required || false);
-                $input.setAttribute('readonly', formRow.input.readonly || false);
+                if (formRow.input.disabled) $input.setAttribute('disabled', formRow.input.disabled);
+                if (formRow.input.required) $input.setAttribute('required', formRow.input.required);
+                if (formRow.input.readonly) $input.setAttribute('readonly', formRow.input.readonly);
 
                 /* type specific input attributes, all of them are included for future improvements
                 * reference source is https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input 
@@ -80,7 +81,7 @@
                     case 'button':
                         break;
                     case 'checkbox':
-                        $form.setAttribute('checked', formRow.input.checked || false);
+                        if (formRow.input.checked) $form.setAttribute('checked', formRow.input.checked);
                         break;
                     case 'color':
                         break;
@@ -91,14 +92,14 @@
                         if ('pattern' in formRow.input) $input.setAttribute('pattern', formRow.input.pattern);
                         break;
                     case 'email':
-                        $input.setAttribute('multiple', formRow.input.multiple || false);
+                        if (formRow.input.multiple) $input.setAttribute('multiple', formRow.input.multiple);
                         if ('size' in formRow.input) $input.setAttribute('size', formRow.input.size);
                         if ('minLength' in formRow.input) $input.setAttribute('minLength', formRow.input.minLength);
                         if ('maxLength' in formRow.input) $input.setAttribute('maxLength', formRow.input.maxLength);
                         if ('pattern' in formRow.input) $input.setAttribute('pattern', formRow.input.pattern);
                         break;
                     case 'file':
-                        $input.setAttribute('multiple', formRow.input.multiple || false);
+                        if (formRow.input.multiple) $input.setAttribute('multiple', formRow.input.multiple);
                         if ('accept' in formRow.input) $input.setAttribute('accept', formRow.input.accept);
                         break;
                     case 'hidden':
@@ -114,15 +115,15 @@
                     case 'number':
                         break;
                     case 'password':
-                        $input.setAttribute('autocoplete', formRow.input.autocomplete || false);
-                        $input.setAttribute('inputmode', formRow.input.inputmode || false);
+                        if (formRow.input.autocomplete) $input.setAttribute('autocoplete', formRow.input.autocomplete);
+                        if (formRow.input.inputmode) $input.setAttribute('inputmode', formRow.input.inputmode);
                         if ('size' in formRow.input) $input.setAttribute('size', formRow.input.size);
                         if ('minLength' in formRow.input) $input.setAttribute('minLength', formRow.input.minLength);
                         if ('maxLength' in formRow.input) $input.setAttribute('maxLength', formRow.input.maxLength);
                         if ('pattern' in formRow.input) $input.setAttribute('pattern', formRow.input.pattern);
                         break;
                     case 'radio':
-                        $form.setAttribute('checked', formRow.input.checked || false);
+                        if (formRow.input.checked) $form.setAttribute('checked', formRow.input.checked);
                         break;
                     case 'range':
                         if ('min' in formRow.input) $input.setAttribute('min', formRow.input.min);
@@ -132,7 +133,7 @@
                     case 'reset':
                         break;
                     case 'search':
-                        $input.setAttribute('autocoplete', formRow.input.autocomplete || false);
+                        if (formRow.input.autocomplete) $input.setAttribute('autocoplete', formRow.input.autocomplete);
                         if ('placeholder' in formRow.input) $input.setAttribute('placeholder', formRow.input.placeholder);
                         if ('size' in formRow.input) $input.setAttribute('size', formRow.input.size);
                         if ('minLength' in formRow.input) $input.setAttribute('minLength', formRow.input.minLength);
