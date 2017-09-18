@@ -23,4 +23,4 @@ Any contribution, suggestion or comment is more than welcome.
 * **Halil Can Ozcelik** - *Initial work* - [hcoz](https://github.com/hcoz)
 
 ## License
-This project is licensed under the Apache License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details
