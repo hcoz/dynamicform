@@ -1,0 +1,30 @@
+{
+  "name": "dynamicform",
+  "version": "0.1.1",
+  "description": "Dynamic form generator wiht custom HTML element",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-minify": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-minify": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcoz/dynamicform.git"
+  },
+  "keywords": [
+    "form",
+    "dynamic",
+    "input"
+  ],
+  "author": "hco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hcoz/dynamicform/issues"
+  },
+  "homepage": "https://github.com/hcoz/dynamicform#readme"
+}
