@@ -1,0 +1,22 @@
+{
+  "name": "dynamicform",
+  "description": "Dynamic form generator wiht custom HTML element",
+  "main": "index.js",
+  "authors": [
+    "hco"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "form",
+    "dynamic",
+    "input"
+  ],
+  "homepage": "https://github.com/hcoz/dynamicform",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
