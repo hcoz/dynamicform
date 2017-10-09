@@ -1,7 +1,7 @@
 # dynamicform
 a client-side dynamic form generator
 
-This library enables adding forms with a custom HTML tag '<dynamicform>'. This tag needs an 'id' attribute and 'data-json' attribute includes path of related form JSON file. There is an example HTML file in repo.
+This library enables adding forms with "dynamicform" custom HTML tag. This tag needs an 'id' attribute and 'data-json' attribute includes path of related form JSON file. There is an example HTML file in repo.
 
 ## Installing
 You can use bower to install this package. Just run this command: 
